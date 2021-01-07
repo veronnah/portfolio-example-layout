@@ -27,6 +27,11 @@
 body {
     font-family: Allerta;
     font-weight: 400;
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
 }
 
 .container {
@@ -165,9 +170,101 @@ body {
     margin-bottom: 40px;
 }
 
-.prog{
+.prog {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.portfolio {
+    background: #F6F6F6;
+    min-height: 2253px;
+    padding-bottom: 97px;
+}
+
+.portfolio__heading {
+    font-size: 34px;
+    line-height: 42px;
+    text-align: center;
+    font-weight: 700;
+    color: #070707;
+    padding-top: 112px;
+    padding-bottom: 48px;
+}
+
+.pic,
+.pic:not(:first-child) {
+    margin-top: 100px;
+    margin-bottom: 45px;
+}
+
+.portfolio-pic {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    align-items: center;
+    text-decoration-line: underline;
+    color: #070707;
+    transition: ease-in-out .3s all;
+}
+
+.link:hover {
+    color: #264f88;
+}
+
+.contacts {
+    min-height: 622px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-heading {
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: 700;
+    color: #070707;
+    margin-bottom: 20px;
+}
+
+.contact-underheading {
+    font-size: 18px;
+    line-height: 22px;
+    color: #070707;
+    margin-bottom: 30px;
+}
+
+.contact__button {
+    padding: 13px 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #070707;
+    color: #fff;
+    margin-bottom: 70px;
+    border: none;
+    outline: none;
+    box-shadow: #8d8686  3px 3px 6px;
+    transition: ease-in-out .3s all;
+
+}
+.contact__button:hover{
+    transform: translateY(5px);
+}
+.socials {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 46px;
+}
+
+.likemeon {
+    font-size: 14px;
+    line-height: 17px;
+    color: #828282;
 }

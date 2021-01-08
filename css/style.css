@@ -24,22 +24,26 @@
     /* Legacy iOS */
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: Allerta;
     font-weight: 400;
     user-select: none;
 }
-.js-scroll{
+
+.js-scroll {
     text-decoration: none;
     color: #828282;
     transition: ease-in-out .3s all;
 }
-.js-scroll:hover{
+
+.js-scroll:hover {
     color: #000;
 }
+
 img {
     pointer-events: none;
 }
@@ -57,6 +61,19 @@ img {
     font-size: 18px;
     line-height: 22px;
 
+}
+
+.header__burger{
+    display: none;
+}
+
+.line-1,
+.line-2,
+.line-3{
+    height: 4px;
+    width: 33px;
+    background-color: #000;
+    margin-bottom: 4px;
 }
 
 .tabs {
@@ -83,6 +100,7 @@ img {
 }
 
 .info-heading {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     font-family: Allerta;
@@ -90,20 +108,18 @@ img {
 }
 
 .heading-name {
-    height: 120px;
     width: 120px;
     font-size: 48px;
     line-height: 59px;
     letter-spacing: -3px;
     font-weight: 700;
-    margin-top: 40px;
-    margin-bottom: 30px;
+  
 }
 
 .heading-miniinfo {
     max-width: 155px;
     min-height: 44px;
-    margin-top: 95px;
+    margin-top: 72px;
     margin-bottom: 50px;
     margin-right: 362px;
 }
@@ -116,7 +132,11 @@ img {
     right: -17px;
     transform: rotate(-90deg);
 }
-
+.photo{
+    background-image: url('../img/man.jpg');
+    width: 945px;
+    height: 388px;
+}
 .about__me {
     min-height: 506px;
     background: #F6F6F6;
@@ -260,13 +280,15 @@ img {
     margin-bottom: 70px;
     border: none;
     outline: none;
-    box-shadow: #8d8686  3px 3px 6px;
+    box-shadow: #8d8686 3px 3px 6px;
     transition: ease-in-out .3s all;
 
 }
-.contact__button:hover{
+
+.contact__button:hover {
     transform: translateY(5px);
 }
+
 .socials {
     display: flex;
     justify-content: space-between;
@@ -277,4 +299,118 @@ img {
     font-size: 14px;
     line-height: 17px;
     color: #828282;
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        display: none;
+        position: relative;
+    }
+
+    .info-heading {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+    .header__burger{
+        display: block;
+        margin-top: 20px;
+        margin-right: 5px;
+    }
+    .heading-miniinfo {
+        margin-right: 170px;
+    }
+    .heading-lang{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 968px){
+     .info-heading {
+        margin: 20px 20px 0 20px;
+    }
+    .heading-miniinfo {
+        margin-right: 170px;
+    }
+    .photo{
+        background-image: url('../img/man.jpg');
+        width: 850px;
+        height: 388px;
+        margin: 0 auto;
+        margin-bottom: 83px;
+     } 
+   
+}
+@media screen and (max-width: 900px){
+    .info-heading {
+        margin: 20px 20px 0 20px;
+    }
+    .heading-miniinfo {
+        margin-right: 170px;
+    }
+    .photo{
+        background-image: url('../img/man.jpg');
+        width: 800px;
+        height: 388px;
+        margin: 0 auto;
+        margin-bottom: 83px;
+    }
+}
+@media screen and (max-width: 830px){
+    .info-heading {
+        margin: 20px 30px 0 30px;
+    }
+    .heading-miniinfo {
+        margin-right: 170px;
+    }
+    .photo{
+        background-image: url('../img/man.jpg');
+        width: 730px;
+        height: 388px;
+        margin: 0 auto;
+        margin-bottom: 83px;
+    }
+}
+@media screen and (max-width: 740px){
+
+    .heading-miniinfo {
+        margin-right: 90px;
+    }
+    .photo{
+        background-image: url('../img/man.jpg');
+        width: 600px;
+        height: 388px;
+        margin: 0 auto;
+        margin-bottom: 83px;
+    }
+}
+@media screen and (max-width: 630px){
+    .name__info-photo{
+        height: 836px;
+    }
+    .info-heading {
+        position: relative;
+      margin-top: 0px;  
+      padding: 0;
+     }
+    .heading-miniinfo {
+        margin-right: 90px;
+    }
+    .photo{
+        background-image: url('../img/man-min.jpg');
+        width: 317px;
+        height: 478px; 
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 83px;
+    }
+    .heading-name {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .header__burger{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }

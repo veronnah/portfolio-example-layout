@@ -63,19 +63,19 @@ img {
 
 }
 
-.header__burger{
+.header__burger {
     display: none;
 }
 
 .line-1,
 .line-2,
-.line-3{
+.line-3 {
     height: 4px;
     width: 33px;
     background-color: #000;
     margin-bottom: 4px;
 }
-
+Ё
 .tabs {
     height: 88px;
     color: #828282;
@@ -100,6 +100,7 @@ img {
 }
 
 .info-heading {
+    position: relative;
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -113,7 +114,6 @@ img {
     line-height: 59px;
     letter-spacing: -3px;
     font-weight: 700;
-  
 }
 
 .heading-miniinfo {
@@ -132,11 +132,13 @@ img {
     right: -17px;
     transform: rotate(-90deg);
 }
-.photo{
+
+.photo {
     background-image: url('../img/man.jpg');
     width: 945px;
     height: 388px;
 }
+
 .about__me {
     min-height: 506px;
     background: #F6F6F6;
@@ -209,7 +211,7 @@ img {
 
 .portfolio {
     background: #F6F6F6;
-    min-height: 2253px;
+    /* min-height: 2253px; */
     padding-bottom: 97px;
 }
 
@@ -300,6 +302,7 @@ img {
     line-height: 17px;
     color: #828282;
 }
+/* //////////////////////media querries///////////////////////////// */
 
 @media screen and (max-width: 1000px) {
     .header {
@@ -311,44 +314,68 @@ img {
         margin-top: 20px;
         flex-wrap: wrap;
     }
-    .header__burger{
+
+    .header__burger {
         display: block;
-        margin-top: 20px;
-        margin-right: 5px;
+        position: absolute;
+        top: 15px;
+        right: 0;
     }
+
     .heading-miniinfo {
         margin-right: 170px;
     }
-    .heading-lang{
+
+    .heading-lang {
         display: none;
     }
-    
+
 }
 
-@media screen and (max-width: 968px){
-     .info-heading {
+@media screen and (max-width: 968px) {
+    .info-heading {
         margin: 20px 20px 0 20px;
+    }
+    .header__burger {
+        top: 20px;
     }
     .heading-miniinfo {
         margin-right: 170px;
     }
-    .photo{
+    .photo {
         background-image: url('../img/man.jpg');
         width: 850px;
         height: 388px;
         margin: 0 auto;
         margin-bottom: 83px;
-     } 
-   
+    }
+    .programs{
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+    .pic{
+        width: 800px;
+        height: 410px;
+        text-align: center;
+    }
+    .portfolio-pic{
+        display: flex;
+        align-items: center;
+    }
 }
-@media screen and (max-width: 900px){
+
+@media screen and (max-width: 900px) {
     .info-heading {
         margin: 20px 20px 0 20px;
+    }
+    .header__burger {
+        top: 15px;
     }
     .heading-miniinfo {
         margin-right: 170px;
     }
-    .photo{
+
+    .photo {
         background-image: url('../img/man.jpg');
         width: 800px;
         height: 388px;
@@ -356,61 +383,154 @@ img {
         margin-bottom: 83px;
     }
 }
-@media screen and (max-width: 830px){
+
+@media screen and (max-width: 830px) {
     .info-heading {
         margin: 20px 30px 0 30px;
     }
+
     .heading-miniinfo {
         margin-right: 170px;
     }
-    .photo{
+    .header__burger {
+        top: 18px;
+    }
+    .photo {
         background-image: url('../img/man.jpg');
         width: 730px;
         height: 388px;
         margin: 0 auto;
         margin-bottom: 83px;
     }
+    .pic{
+        width: 700px;
+        height: 370px;
+    }
+
 }
-@media screen and (max-width: 740px){
+
+@media screen and (max-width: 740px) {
 
     .heading-miniinfo {
         margin-right: 90px;
     }
-    .photo{
+    .header__burger {
+        top: 20px;
+    }
+    .photo {
         background-image: url('../img/man.jpg');
         width: 600px;
         height: 388px;
         margin: 0 auto;
         margin-bottom: 83px;
     }
+    .pic{
+        width: 600px;
+        height: 330px;
+    }
 }
-@media screen and (max-width: 630px){
-    .name__info-photo{
+
+@media screen and (max-width: 630px) {
+    .name__info-photo {
         height: 836px;
     }
+
     .info-heading {
         position: relative;
-      margin-top: 0px;  
-      padding: 0;
-     }
+        margin-top: 0px;
+        padding: 0;
+    }
+
     .heading-miniinfo {
         margin-right: 90px;
     }
-    .photo{
+
+    .photo {
         background-image: url('../img/man-min.jpg');
         width: 317px;
-        height: 478px; 
+        height: 478px;
         overflow: hidden;
         margin: 0 auto;
         margin-bottom: 83px;
     }
+
     .heading-name {
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    .header__burger{
-        position: absolute;
-        top: 0;
-        right: 0;
+
+    .header__burger {
+        top: 45px;
+    }
+    .skills{
+        padding-bottom: 90px;
+    }
+    .programs{
+        flex-direction: column;
+    }
+    .prog{
+        margin-bottom: 80px;
+    }
+    .pic{
+        width: 490px;
+        height: 290px;
+    }
+   
+}
+
+@media screen and (max-width: 500px) {
+    .header__burger {
+        top: 50px;
+    }
+    .heading-name {
+        width: 170px;
+        font-size: 48px;
+        line-height: 59px;
+        letter-spacing: -3px;
+        font-weight: 700;
+    }
+    .pic{
+        width: 420px;
+        height: 238px;
+    }
+}
+@media screen and (max-width: 473px){
+    .heading-miniinfo {
+        margin-top: 23px;
+    }
+    .heading-name {
+        width: 170px;
+        font-size: 48px;
+        margin-bottom: 0;
+        line-height: 59px;
+        letter-spacing: -3px;
+        font-weight: 700;
+    }
+    .pic{
+        width: 320px;
+        height: 180px;
+    }
+   
+}
+@media screen and (max-width: 320px){
+    .photo{
+        width: 300px;
+    }
+    .about__me-text{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .pic{
+        width: 280px;
+        height: 160px;
+    }
+}
+@media screen and (max-width: 280px){
+    .photo {
+        width: 260px;
+        height: 430px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 83px;
     }
 }

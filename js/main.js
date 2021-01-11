@@ -1,10 +1,9 @@
-
 (function () { 
 
     const smoothScroll = function (targetEl, duration) {
-        const headerElHeight =  document.querySelector('.header').clientHeight;
+        // const headerElHeight =  document.querySelector('.header').clientHeight;
         let target = document.querySelector(targetEl);
-        let targetPosition = target.getBoundingClientRect().top - headerElHeight; 
+        // let targetPosition = target.getBoundingClientRect().top - headerElHeight; 
         let startPosition = window.pageYOffset;
         let startTime = null;
     
@@ -47,7 +46,22 @@
     });
     const closeBtn = document.getElementById('close'); 
     closeBtn.addEventListener('click', () => {
-        burgerActive.classList.replace('burger__active', 'burger__disabled');
+        
+        addAnimationOnClose(burgerActive);
       
-    })
+    });
+    const tab = document.querySelectorAll('.burger-tabs').forEach(item => {
+        item.addEventListener('click', event => {
+            addAnimationOnClose(burgerActive);
+        });
+    });
+  
 }());
+
+function addAnimationOnClose(burgerActive){
+    burgerActive.classList.add('close-animation');
+    setTimeout(() => {
+        burgerActive.classList.remove('close-animation');
+        burgerActive.classList.replace('burger__active', 'burger__disabled');
+  }, 1000);
+}

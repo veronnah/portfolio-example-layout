@@ -37,3 +37,17 @@
     };
     scrollTo();
 }());
+(function(){
+    const burger = document.querySelector(".header__burger"); 
+    const burgerDisabled = document.querySelector('.burger__disabled');
+    let burgerActive;
+    burger.addEventListener('click',() => {
+        burgerDisabled.classList.replace('burger__disabled', 'burger__active');
+        burgerActive = document.querySelector('.burger__active');
+    });
+    const closeBtn = document.getElementById('close'); 
+    closeBtn.addEventListener('click', () => {
+        burgerActive.classList.replace('burger__active', 'burger__disabled');
+      
+    })
+}());

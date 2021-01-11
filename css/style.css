@@ -66,16 +66,22 @@ img {
 .header__burger {
     display: none;
 }
+/* .burger__active{
+    display: none;
+} */
+.burger__disabled{
+    display: none;
+}
 
-.line-1,
+/* .line-1,
 .line-2,
 .line-3 {
     height: 4px;
     width: 33px;
     background-color: #000;
     margin-bottom: 4px;
-}
-Ё
+} */
+
 .tabs {
     height: 88px;
     color: #828282;
@@ -316,10 +322,25 @@ img {
     }
 
     .header__burger {
+        cursor: pointer;
         display: block;
         position: absolute;
         top: 15px;
         right: 0;
+    }
+    .burger__active{
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+    }
+    .close{
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
     }
 
     .heading-miniinfo {

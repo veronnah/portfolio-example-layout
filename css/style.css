@@ -138,6 +138,14 @@ img {
     position: absolute;
     transform: rotate(-90deg);
 }
+.data-reload{
+    text-decoration: none;
+    color: #828282;
+    transition: ease-in-out .2s all;
+}
+.data-reload:hover{
+    color: #070707;
+}
 
 .heading-lang {
     bottom: 88px;

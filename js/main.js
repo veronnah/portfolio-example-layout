@@ -65,3 +65,4 @@ function addAnimationOnClose(burgerActive){
         burgerActive.classList.replace('burger__active', 'burger__disabled');
   }, 1000);
 }
+
